@@ -1,0 +1,34 @@
+import java.util.Hashtable;
+import java.util.Scanner;
+public class Example1 {
+	public static void main(String[] args) {
+		Hashtable<String, String> bus = new Hashtable<String, String>();
+		Scanner key = new Scanner(System.in);
+		while (true) {
+			System.out.println("1. Add new bus details");
+			System.out.println("2.Search");
+			System.out.println("3.Exit");
+			int ch = Integer.parseInt(key.nextLine());
+			if (ch == 1) {
+				System.out.println("Enter busno and routes");
+				String busno = key.nextLine();
+			 
+				String routes =  key.nextLine();
+				bus.put(busno, routes);
+			}
+			else if( ch== 2 )
+			{
+				System.out.println("Enter busno ");
+				String busno = key.nextLine();
+				 
+				if( bus.containsKey(busno) == true)
+					System.out.println(bus.get(busno));
+				else
+					System.out.println("Sorry !! bus not found");
+			}
+			else if( ch == 13 )break;
+			
+		}
+
+	}
+}
