@@ -12,7 +12,7 @@ public class Example1 {
 			if (ch == 1) {
 				System.out.println("Enter busno and routes");
 				String busno = key.nextLine();
-			 
+			        busno = busno.toUpperCase();
 				String routes =  key.nextLine();
 				bus.put(busno, routes);
 			}
